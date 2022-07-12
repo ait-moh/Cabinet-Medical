@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #FF0000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Medecin.MedecinController">
+   <children>
+      <TabPane layoutX="7.0" layoutY="6.0" prefHeight="700.0" prefWidth="888.0" style="-fx-background-color: #FF0000;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Gérer les patients">
+          <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #FF0000;">
+                     <children>
+                        <Button layoutX="17.0" layoutY="408.0" mnemonicParsing="false" onAction="#addPatient" text="Ajouter patient">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font></Button>
+                        <Button layoutX="14.0" layoutY="465.0" mnemonicParsing="false" onAction="#modifyPatient" text="Modifier patient">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font></Button>
+                        <Button layoutX="140.0" layoutY="408.0" mnemonicParsing="false" onAction="#deletePatient" text="Supprimer patient">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font></Button>
+                        <Button layoutX="725.0" layoutY="602.0" mnemonicParsing="false" onAction="#SignOut" prefHeight="26.0" prefWidth="125.0" text="Se déconnecter">
+                           <effect>
+                              <DropShadow />
+                           </effect></Button>
+                        <Button layoutX="166.0" layoutY="465.0" mnemonicParsing="false" onAction="#rechercher" text="rechercher">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font></Button>
+                        <Button layoutX="723.0" layoutY="564.0" mnemonicParsing="false" onAction="#retour" prefHeight="26.0" prefWidth="126.0" text="Retour">
+                           <effect>
+                              <DropShadow />
+                           </effect></Button>
+                        <TextField fx:id="nom" layoutX="140.0" layoutY="491.0" promptText="nom">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font></TextField>
+                        <TableView fx:id="patientTable" layoutX="10.0" layoutY="14.0" prefHeight="365.0" prefWidth="867.0">
+                          <columns>
+                            <TableColumn fx:id="id_column" prefWidth="19.200044631958008" text="id" />
+                            <TableColumn fx:id="nom_column" prefWidth="57.600006103515625" text="nom" />
+                              <TableColumn fx:id="prenom_column" prefWidth="67.20000457763672" text="prenom" />
+                              <TableColumn fx:id="dateNaissance_column" prefWidth="108.00003051757812" text="date de naissance" />
+                              <TableColumn fx:id="sex_column" prefWidth="22.39996337890625" text="sex" />
+                              <TableColumn fx:id="tel_column" prefWidth="64.79998779296875" text="tel" />
+                              <TableColumn fx:id="email_column" prefWidth="120.0" text="email" />
+                              <TableColumn fx:id="adresse_column" prefWidth="96.00003051757812" text="adresse" />
+                              <TableColumn fx:id="date_premiere_visite_column" prefWidth="148.800048828125" text="date de la première visite" />
+                              <TableColumn fx:id="date_derniere_visite_column" prefWidth="159.20001220703125" text="date de la dernière visite" />
+                          </columns>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </TableView>
+                        <Button layoutX="370.0" layoutY="408.0" mnemonicParsing="false" onAction="#afficherEtatPatient" prefHeight="26.0" prefWidth="132.0" text="afficher état patient">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font></Button>
+                     </children>
+                  </AnchorPane>
+          </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

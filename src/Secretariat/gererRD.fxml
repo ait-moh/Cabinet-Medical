@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Secretariat.GererRDController">
+   <children>
+      <TabPane layoutX="7.0" layoutY="6.0" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Gérer les rendez-vous">
+          <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #FF0000;">
+                     <children>
+                        <VBox layoutX="8.0" layoutY="7.0" prefHeight="400.0" prefWidth="882.0">
+                           <children>
+                              <TableView fx:id="RD_Table" prefHeight="400.0" prefWidth="890.0">
+                                <columns>
+                                  <TableColumn fx:id="num_RD_column" prefWidth="55.199951171875" text="Num_RD" />
+                                  <TableColumn fx:id="id_patient_column" prefWidth="35.20001220703125" text="id" />
+                                    <TableColumn fx:id="nom_patient_column" prefWidth="115.99996185302734" text="nom" />
+                                    <TableColumn fx:id="prenom_patient_column" prefWidth="127.20001220703125" text="prénom" />
+                                    <TableColumn fx:id="tel_patient_column" prefWidth="81.60003662109375" text="tel" />
+                                    <TableColumn fx:id="email_patient_column" prefWidth="168.80007934570312" text="email" />
+                                    <TableColumn fx:id="jour_RD_column" prefWidth="76.7999267578125" text="jour_RD" />
+                                    <TableColumn fx:id="heure_RD_column" minWidth="0.0" prefWidth="59.199951171875" text="heure_RD" />
+                                    <TableColumn fx:id="date_RD_column" prefWidth="69.5999755859375" text="date_RD" />
+                                    <TableColumn fx:id="inscrit_en_BD_column" prefWidth="88.80002441406248" text="inscrit_en_BD" />
+                                </columns>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="14.0" layoutY="421.0" prefHeight="112.0" prefWidth="134.0">
+                           <children>
+                              <VBox prefHeight="75.0" prefWidth="130.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#addRD" prefHeight="25.0" prefWidth="130.0" text="ajouter_RD">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="Arial Bold Italic" size="12.0" />
+                                       </font></Button>
+                                    <Button mnemonicParsing="false" onAction="#deleteRD" prefHeight="25.0" prefWidth="130.0" text="supprimer_RD">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="Arial Bold Italic" size="12.0" />
+                                       </font></Button>
+                                    <Button mnemonicParsing="false" onAction="#modifierRD" prefHeight="25.0" prefWidth="130.0" text="modifier_RD">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="Arial Bold Italic" size="12.0" />
+                                       </font></Button>
+                                 </children>
+                              </VBox>
+                              <Button mnemonicParsing="false" onAction="#AjoutBD" prefHeight="25.0" prefWidth="130.0" text="ajout_en_BD">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <font>
+                                    <Font name="Arial Bold Italic" size="12.0" />
+                                 </font></Button>
+                           </children>
+                        </VBox>
+                        <Button layoutX="763.0" layoutY="629.0" mnemonicParsing="false" onAction="#SignOut" prefHeight="26.0" prefWidth="124.0" text="Se deconnecter">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font></Button>
+                        <VBox layoutX="212.0" layoutY="461.0" prefHeight="51.0" prefWidth="134.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#loadRDdata" prefHeight="26.0" prefWidth="260.0" text="spécifier le jour">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <font>
+                                    <Font name="Arial Bold Italic" size="12.0" />
+                                 </font></Button>
+                              <ComboBox fx:id="jour_RD" prefHeight="26.0" prefWidth="259.0" promptText="jour_RD">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect></ComboBox>
+                           </children>
+                        </VBox>
+                        <Button layoutX="613.0" layoutY="461.0" mnemonicParsing="false" onAction="#rechercher" text="rechercher_RD">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font></Button>
+                        <Button layoutX="763.0" layoutY="591.0" mnemonicParsing="false" onAction="#retourAuMenuPrincipal" prefHeight="26.0" prefWidth="123.0" text="retour ">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <font>
+                              <Font name="Arial Bold Italic" size="12.0" />
+                           </font></Button>
+                        <TextField fx:id="nom_patient" layoutX="559.0" layoutY="487.0" prefHeight="25.0" prefWidth="200.0" promptText="nom_patient">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></TextField>
+                     </children>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </AnchorPane>
+          </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

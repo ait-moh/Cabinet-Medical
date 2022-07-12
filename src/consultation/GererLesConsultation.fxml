@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="consultation.mainControler">
+   <children>
+      <Button fx:id="ajouterConsultation" layoutX="254.0" layoutY="359.0" mnemonicParsing="false" onAction="#AjouterConsultation" prefHeight="47.0" prefWidth="219.0" text="Ajouter la Consultation" textAlignment="RIGHT">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="modifierConsultation" layoutX="419.0" layoutY="434.0" mnemonicParsing="false" onAction="#Modifier" prefHeight="41.0" prefWidth="288.0" text="Modifier " />
+      <Button fx:id="recharche" layoutX="59.0" layoutY="434.0" mnemonicParsing="false" onAction="#RecharcheConsultation" prefHeight="41.0" prefWidth="230.0" text="Recharcher/Suprimier" />
+      <Button fx:id="deconected" layoutX="-2.0" mnemonicParsing="false" onAction="#deconnecter" prefHeight="17.0" prefWidth="239.0" text="Déconnecter">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button fx:id="menupRINCIPAL" cache="true" layoutX="236.0" mnemonicParsing="false" onAction="#RotourMenu" prefHeight="25.0" prefWidth="230.0" text="Menu principal">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="463.0" mnemonicParsing="false" onAction="#recherchID" prefHeight="31.0" prefWidth="324.0" text="Recherche ID" textFill="#bf1111" />
+      <Label layoutX="65.0" layoutY="86.0" text="code : " />
+      <Label layoutX="65.0" layoutY="211.0" prefHeight="17.0" prefWidth="53.0" text="Date :" />
+      <Label layoutX="49.0" layoutY="142.0" text="idPatient :" />
+      <TextField fx:id="code" layoutX="116.0" layoutY="86.0" prefHeight="25.0" prefWidth="129.0" promptText="code de consultation" />
+      <TextField fx:id="idPatient" layoutX="116.0" layoutY="147.0" prefHeight="25.0" prefWidth="129.0" promptText=" id de patient" />
+      <DatePicker fx:id="dateDeConsultation" layoutX="118.0" layoutY="207.0" prefHeight="25.0" prefWidth="186.0" promptText="date de consultation" />
+      <TextField fx:id="montant" layoutX="118.0" layoutY="262.0" prefHeight="25.0" prefWidth="167.0" promptText="montant" />
+      <Label layoutX="23.0" layoutY="254.0" prefHeight="17.0" prefWidth="105.0" text="        Montant  :" />
+      <Label layoutX="327.0" layoutY="78.0" prefHeight="17.0" prefWidth="92.0" text="Commentaire :" />
+      <Label layoutX="13.0" layoutY="317.0" prefHeight="17.0" prefWidth="105.0" text="Les Medicament : " />
+      <Button layoutX="115.0" layoutY="309.0" mnemonicParsing="false" onAction="#ovrirFznztreMedicament" prefHeight="32.0" prefWidth="174.0" text="Ajouter" />
+      <Button fx:id="maladiesChro" layoutX="419.0" layoutY="160.0" mnemonicParsing="false" onAction="#ovrirMaladiesDiagnostique" prefHeight="47.0" prefWidth="141.0" text="Maladies Diagnostique" />
+      <TextArea fx:id="Commantaire" layoutX="418.0" layoutY="76.0" prefHeight="70.0" prefWidth="288.0" />
+      <Button layoutX="419.0" layoutY="229.0" mnemonicParsing="false" onAction="#ovrirBilan" prefHeight="47.0" prefWidth="288.0" text="Ajouter un bilan" />
+      <Button fx:id="Etat" layoutX="418.0" layoutY="294.0" mnemonicParsing="false" onAction="#Etat" prefHeight="47.0" prefWidth="288.0" text="L'etat de patient" />
+      <Label layoutX="18.0" layoutY="397.0" prefHeight="17.0" prefWidth="116.0" text="Consultation :" underline="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="245.0" layoutY="147.0" mnemonicParsing="false" onAction="#coller" prefHeight="25.0" prefWidth="60.0" text="coller" />
+      <Button fx:id="maladiesChro1" layoutX="566.0" layoutY="160.0" mnemonicParsing="false" onAction="#ovrirMaladies" prefHeight="47.0" prefWidth="141.0" text="Maladies chroniques " />
+      <Button fx:id="generate" layoutX="245.0" layoutY="86.0" mnemonicParsing="false" onAction="#GenerateCode" prefHeight="25.0" prefWidth="60.0" text="générer">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
