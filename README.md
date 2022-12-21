@@ -1,4 +1,4 @@
-# Cabine-Medicale-
+# Cabinet-Médical-
 Projet pour la gestion d'un cabinet medical
 Le but de ce projet est de concevoir et de développer une application qui permet la gestion d'un cabinet médical(gestion des rendez-vous,gestion des patients,Consultation...),en utlisant la technologie de java beans et javafx pour UI et sqllite pour database
 
